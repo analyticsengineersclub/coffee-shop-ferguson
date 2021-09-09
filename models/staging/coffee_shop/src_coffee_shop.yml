@@ -1,0 +1,47 @@
+version: 2
+
+sources:
+    - name: coffee_shop
+      description: '{{ doc("project_description") }}'
+      project: analytics-engineers-club
+ 
+      tables:
+        - name: customers
+          description: details about customers that have visited the coffee shop
+          columns:
+            - name: id
+              tests:
+                - unique
+                - not_null
+
+        - name: orders
+          description: details about each order made at the coffee shop 
+          columns:
+            - name: id
+              tests:
+                - unique
+                - not_null
+
+        - name: order_items
+          description: details about items associated with each order made at the coffee shop 
+          columns:
+            - name: id
+              tests:
+                - unique
+                - not_null
+        
+        - name: products
+          description: list of products available at the coffee shop
+          columns:
+            - name: id
+              tests:
+                - unique
+                - not_null
+
+        - name: product_prices
+          description: list of products with prices and time range the price was set
+          columns:
+            - name: id
+              tests:
+                - unique
+                - not_null

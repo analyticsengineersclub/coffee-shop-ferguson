@@ -20,4 +20,4 @@ select
 
 from {{source('coffee_shop','customers')}} as c
 left join customer_orders as co
-    on c.id = co.customer_id
+     on c.id = co.customer_id
