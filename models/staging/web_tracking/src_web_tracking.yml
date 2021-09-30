@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: web_tracking
+    database: analytics-engineers-club
+    schema: web_tracking
+
+    tables:
+      - name: pageviews
+        columns:
+          - name: id
+            tests: 
+              - unique
+              - not_null
+          - name: visitor_id
+            tests: 
+              - not_null

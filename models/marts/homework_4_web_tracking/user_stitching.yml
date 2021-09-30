@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: user_stitching
+    description: test only 1 vistor_id per customer_id
+    columns:
+      - name: visitor_id
+          - not_null
