@@ -62,11 +62,16 @@ sessions as
 final as 
 (
     select 
-        *,
+        session_id, 
+        pageview_id,
+        visitor_id,
+        customer_id,
+        device_type,
+        page,
+        visit_time,
         MIN(visit_time) OVER (PARTITION BY session_id) AS session_start,
         MAX(visit_time) OVER (PARTITION BY session_id) AS session_end
     from sessions
 )
 
 select * from final
-
